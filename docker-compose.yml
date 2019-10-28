@@ -1,0 +1,7 @@
+version: '3.6'
+
+services:
+  worker:
+    build: .
+    image: logwork-worker:1.0.0
+    container_name: worker
