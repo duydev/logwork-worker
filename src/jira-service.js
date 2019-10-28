@@ -69,8 +69,6 @@ class JiraService extends JiraApi {
       timeSpent
     };
 
-    console.log('BODY', body);
-
     var options = {
       rejectUnauthorized: this.strictSSL,
       uri: this.makeUri(
