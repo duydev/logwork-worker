@@ -23,4 +23,4 @@ const job = nodeSchedule.scheduleJob(process.env.JOB_SCHEDULE_RULE, () => {
     });
 });
 
-console.log('APP ended.');
+console.log('APP waiting...');
