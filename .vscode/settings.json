@@ -4,8 +4,10 @@
         "datetime",
         "insta",
         "jira",
+        "job",
         "objectid",
         "scinfluencer",
+        "timespent",
         "worklog",
         "youtube"
     ]
