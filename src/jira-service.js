@@ -24,6 +24,31 @@ class JiraService extends JiraApi {
     );
   }
 
+  async getCurrentUser() {
+    var options = {
+      rejectUnauthorized: this.strictSSL,
+      uri: this.makeUri('/session', 'rest/auth/', '1'),
+      method: 'GET',
+      json: true
+    };
+
+    return new Promise((resolve, reject) => {
+      this.doRequest(options, function(error, response, body) {
+        if (error) {
+          return reject(error);
+        }
+
+        if (response.statusCode === 200) {
+          return resolve(body);
+        }
+
+        return reject(
+          response.statusCode + ': Error while getting current user'
+        );
+      });
+    });
+  }
+
   async listMyIssue(onlyOpen = false) {
     return new Promise((resolve, reject) => {
       this.getUsersIssues(this.username, onlyOpen, (err, data) => {
