@@ -3,9 +3,9 @@ version: '3.6'
 services:
   worker:
     build: .
-    image: logwork-worker:1.0.0
+    image: logwork-worker:1.0.1
     container_name: worker
-    # restart: always
+    restart: always
     environment:
       - JIRA_PROTOCOL=https
       - JIRA_HOST=jira.younetco.com
