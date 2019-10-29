@@ -41,11 +41,17 @@ jiraService
         )
         .then(data => {
           console.log(data);
+
+          console.log('Next run: ', moment(job.nextInvocation()).format());
         })
         .catch(err => {
           console.log(err);
+
+          console.log('Next run: ', moment(job.nextInvocation()).format());
         });
     });
+
+    console.log('Next run: ', moment(job.nextInvocation()).format());
 
     console.log('APP waiting...');
   })
