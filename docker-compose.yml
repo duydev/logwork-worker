@@ -13,7 +13,7 @@ services:
       - JIRA_API_VERSION=2
       - JIRA_USER=user
       - JIRA_PASS=pass
-      - JOB_SCHEDULE_RULE="40 17 * * 1-5"
+      - JOB_SCHEDULE_RULE=40 17 * * 1-5
       - JOB_ISSUE_ID_OR_KEY=abc
       - JOB_TIMESPENT=1d
       - JOB_COMMENT=comment
