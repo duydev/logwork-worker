@@ -128,3 +128,6 @@ class JiraService extends JiraApi {
 }
 
 module.exports = JiraService;
+module.exports = {
+  jiraService: new JiraService()
+};
