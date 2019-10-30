@@ -13,11 +13,11 @@ function logNextRun(job) {
 function printConfigInfo() {
   log(`
     Config info:
-    - User: ${process.env.JIRA_USER}
-    - Issue id or key: ${process.env.JOB_ISSUE_ID_OR_KEY}
-    - Schedule rule: ${process.env.JOB_SCHEDULE_RULE}
-    - Time spent: ${process.env.JOB_TIMESPENT}
-    - Comment: ${process.env.JOB_COMMENT}
+    - User: "${process.env.JIRA_USER}"
+    - Issue id or key: "${process.env.JOB_ISSUE_ID_OR_KEY}"
+    - Schedule rule: "${process.env.JOB_SCHEDULE_RULE}"
+    - Time spent: "${process.env.JOB_TIMESPENT}"
+    - Comment: "${process.env.JOB_COMMENT}"
   `);
 }
 
